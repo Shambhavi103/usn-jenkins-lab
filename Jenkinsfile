@@ -43,7 +43,6 @@ pipeline {
 }
         stage('Deploy to staging') {
             steps {
-                input message: 'Deploy to staging?', ok: 'Deploy'
                 sh 'mkdir -p /tmp/usn-staging'
                 sh 'cp calculator.py /tmp/usn-staging/'
                 sh 'ls -l /tmp/usn-staging'
